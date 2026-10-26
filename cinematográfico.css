@@ -1,0 +1,25 @@
+/* Animaciones, transiciones y cristal transparente. */
+html{scroll-behavior:smooth}
+.glass{background:rgba(255,255,255,.76);-webkit-backdrop-filter:blur(20px) saturate(150%);backdrop-filter:blur(20px) saturate(150%)}
+@supports not (backdrop-filter:blur(1px)){.glass{background:rgba(255,255,255,.96)}}
+button,a,summary{transition:color .18s ease,background-color .18s ease,box-shadow .18s ease,transform .18s ease}
+.primary:hover:not(:disabled){background:#0663c0;box-shadow:0 5px 18px #0875e122;transform:translateY(-1px)}
+.primary:active:not(:disabled),.icon-button:active{transform:scale(.97)}
+.text-button:hover,.nav nav a:hover,footer nav a:hover{color:#034f9f}
+.chip:hover:not(.active),.icon-button:hover{background:#e7edf5}
+.card{transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease}
+.product-art .mini{transition:transform .35s ease}
+@media(hover:hover){.card:hover{transform:translateY(-4px);box-shadow:0 12px 25px #152f4c0a;border-color:#d6deea}.product-art:hover .mini{transform:rotate(-4deg) translateY(-3px)}}
+.favorite[aria-pressed="true"]{animation:favorite-pop .25s ease}
+.toast{transition:opacity .2s ease,transform .2s ease}
+.drawer[open]{animation:drawer-in .26s ease-out}
+.modal[open]{animation:modal-in .2s ease-out}
+dialog[open]::backdrop{animation:backdrop-in .2s ease-out}
+/* Si JavaScript u Observer no están disponibles, el contenido queda visible. */
+.reveal.will-reveal{opacity:0;transform:translateY(16px);transition:opacity .55s ease,transform .55s ease}
+.reveal.will-reveal.is-visible{opacity:1;transform:none}
+@keyframes drawer-in{from{transform:translateX(100%)}to{transform:translateX(0)}}
+@keyframes modal-in{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+@keyframes backdrop-in{from{opacity:0}to{opacity:1}}
+@keyframes favorite-pop{50%{transform:scale(1.12)}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important}.reveal.will-reveal{opacity:1;transform:none}}

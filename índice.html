@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Explora los celulares COPHONE, guarda tus favoritos y prepara tu carrito.">
+  <title>COPHONE · Tu próximo gran paso</title>
+  <link rel="icon" href="activos/cophone.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="estilos.css">
+  <link rel="stylesheet" href="cinematográfico.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+  <div class="announcement">Conoce COPHONE · Catálogo de demostración · Precios en soles</div>
+  <header class="site-header glass">
+    <div class="container nav">
+      <a class="logo" href="#inicio"><img src="activos/cophone.svg" alt="" width="26" height="26">COPHONE®</a>
+      <button class="icon-button menu-toggle" id="menuToggle" aria-controls="mainNav" aria-expanded="false" aria-label="Abrir menú">☰</button>
+      <nav id="mainNav" aria-label="Navegación principal"><a href="#catalogo">Celulares</a><a href="#promociones">Destacados</a><a href="#beneficios">La experiencia</a><a href="#soporte">Ayuda</a></nav>
+      <div class="nav-actions"><button class="icon-button" id="favoritesToggle" aria-label="Mostrar favoritos" aria-pressed="false">♡ <span id="favoriteCount">0</span></button><button class="cart-button" id="openCart" aria-haspopup="dialog" aria-controls="cartDrawer">Carrito <span id="cartCount">0</span></button></div>
+    </div>
+  </header>
+  <main id="contenido">
+    <section class="hero" id="inicio">
+      <div class="container hero-grid">
+        <div class="hero-copy reveal"><p class="eyebrow">DISEÑADO PARA IR MÁS ALLÁ</p><h1>Lo que imaginas.<br><span>En tus manos.</span></h1><p class="lead">Conoce el COPHONE 16 Ultra. Una pantalla que te envuelve y espacio para todas tus ideas.</p><p class="hero-price">Desde S/ 4,699 <span>· 512 GB</span></p><div class="actions"><button class="primary" data-add="ultra">Añadir al carrito ↗</button><button class="text-button" data-detail="ultra">Conocer el Ultra →</button></div><p class="fine-print">Modelos y características ilustrativos. Sin cobros reales.</p></div>
+        <div class="hero-visual reveal" role="img" aria-label="Ilustración del COPHONE 16 Ultra con acabado titanio y pantalla azul"><div class="hero-orbit"></div><div class="device device-back"><div class="camera-cluster"><i></i><i></i><i></i><span></span></div><b>C</b><small>COPHONE</small></div><div class="device device-front"><div class="device-screen"><span class="island"></span><span class="device-time">09:41</span><span class="device-caption">Una nueva perspectiva.</span></div></div><div class="floating-label glass"><span class="status-dot"></span>16 Ultra <small>El siguiente nivel.</small></div></div>
+      </div>
+      <div class="container hero-meta"><span>01 / La nueva generación</span><a href="#catalogo">Descubre tu próximo celular ↓</a></div>
+    </section>
+    <section class="section" id="promociones" aria-labelledby="promotionsTitle"><div class="container"><div class="section-heading reveal"><p class="eyebrow">DOS FORMAS DE DESTACAR</p><h2 id="promotionsTitle">A tu ritmo. A tu manera.</h2></div><div class="promo-grid">
+      <article class="promo promo-blue reveal"><div><p class="eyebrow">COPHONE AIR</p><h3>Menos peso.<br>Más posibilidades.</h3><p>OLED, 256 GB y un diseño ultraligero.</p><button class="text-button" data-detail="air">Descubrir Air →</button></div><div class="promo-art" aria-hidden="true"><span></span></div></article>
+      <article class="promo promo-lilac reveal"><div><p class="eyebrow">FLIP POCKET</p><h3>Grandes ideas.<br>Formato pequeño.</h3><p>Tu mundo, con una nueva forma.</p><button class="text-button" data-detail="flip">Explorar Flip →</button></div><div class="promo-art flip-art" aria-hidden="true"><span></span></div></article>
+    </div></div></section>
+    <section class="catalog section" id="catalogo" aria-labelledby="catalogTitle"><div class="container">
+      <div class="section-heading heading-row reveal"><div><p class="eyebrow">ENCUENTRA EL TUYO</p><h2 id="catalogTitle">Un celular para cada idea.</h2></div><p id="resultCount" role="status" aria-live="polite"></p></div>
+      <div class="catalog-tools"><div class="filters" id="filters" role="group" aria-label="Filtrar por categoría"><button class="chip active" data-filter="all" aria-pressed="true">Todos</button><button class="chip" data-filter="premium" aria-pressed="false">Premium</button><button class="chip" data-filter="fold" aria-pressed="false">Plegables</button><button class="chip" data-filter="value" aria-pressed="false">Calidad-precio</button></div><div class="search-sort"><label class="search-label"><span aria-hidden="true">⌕</span><span class="sr-only">Buscar celulares</span><input id="searchInput" type="search" placeholder="Busca tu modelo" autocomplete="off"></label><label><span class="sr-only">Ordenar productos</span><select id="sortSelect"><option value="default">Destacados</option><option value="asc">Menor precio</option><option value="desc">Mayor precio</option><option value="name">Nombre: A–Z</option></select></label></div></div>
+      <div class="catalog-status"><label><input type="checkbox" id="onlyFavorites"> Solo favoritos</label><button class="text-button" id="resetFilters">Limpiar filtros</button></div>
+      <div class="products" id="productGrid"></div><noscript><p class="empty">Activa JavaScript para ver el catálogo y utilizar el carrito.</p></noscript>
+    </div></section>
+    <section class="benefits section" id="beneficios" aria-labelledby="benefitsTitle"><div class="container"><div class="section-heading reveal"><p class="eyebrow">LA EXPERIENCIA COPHONE</p><h2 id="benefitsTitle">Elegir bien se siente bien.</h2></div><div class="benefit-grid">
+      <article class="reveal"><span class="benefit-icon" aria-hidden="true">⌕</span><h3>Encuentra tu modelo</h3><p>Busca por nombre o características y compara precios.</p></article><article class="reveal"><span class="benefit-icon" aria-hidden="true">♡</span><h3>Guarda tus favoritos</h3><p>Reúne los equipos que te gustan para volver a ellos después.</p></article><article class="reveal"><span class="benefit-icon" aria-hidden="true">＋</span><h3>Arma tu selección</h3><p>Ajusta cantidades y consulta el total de tu carrito al instante.</p></article><article class="reveal"><span class="benefit-icon" aria-hidden="true">↗</span><h3>Explora con libertad</h3><p>Esta tienda es una demostración. No solicita datos de pago.</p></article>
+    </div></div></section>
+    <section class="support section" id="soporte"><div class="container support-grid"><div><p class="eyebrow">TE LO PONEMOS FÁCIL</p><h2>Un poco más de claridad.</h2><p class="muted">Antes de elegir tu próximo COPHONE.</p></div><div class="faq"><details><summary>¿Puedo comprar y pagar aquí?</summary><p>Esta es una tienda de demostración. Puedes preparar un carrito y revisar un resumen, pero no se procesan pedidos, pagos ni envíos.</p></details><details><summary>¿Se guardan mis favoritos y mi carrito?</summary><p>Se guardan en este navegador cuando permite almacenamiento local. Si lo bloquea o borras sus datos, la selección puede perderse.</p></details><details><summary>¿Los equipos y precios son reales?</summary><p>Los modelos, características, precios y promociones son ilustrativos y muestran la experiencia de la tienda.</p></details></div></div></section>
+  </main>
+  <footer><div class="container footer-main"><div><a class="logo" href="#inicio"><img src="activos/cophone.svg" alt="" width="26" height="26">COPHONE</a><p>Tecnología para lo que viene.</p></div><nav aria-label="Enlaces del pie"><a href="#catalogo">Explorar celulares</a><a href="#promociones">Destacados</a><a href="#soporte">Preguntas frecuentes</a></nav><p>Una experiencia de demostración.<br>Sin pagos ni pedidos reales.</p></div><div class="container footer-bottom"><span>© <span id="year">2026</span> COPHONE</span><span>Hecho para imaginar más.</span></div></footer>
+  <dialog class="drawer" id="cartDrawer" aria-labelledby="cartTitle"><div class="drawer-shell"><div class="drawer-head"><div><p class="eyebrow">TU SELECCIÓN</p><h2 id="cartTitle">Carrito</h2></div><button class="icon-button" data-close="cartDrawer" aria-label="Cerrar carrito">✕</button></div><div class="cart-items" id="cartItems"></div><div class="drawer-foot"><dl class="totals"><div><dt>Subtotal</dt><dd id="cartSubtotal">S/ 0</dd></div><div><dt>Envío</dt><dd>No aplica en demo</dd></div><div class="total"><dt>Total</dt><dd id="cartTotal">S/ 0</dd></div></dl><button class="primary full" id="checkout">Revisar selección →</button><p class="fine-print">Demostración. No se realizará ningún cobro.</p></div></div></dialog>
+  <dialog class="modal" id="productModal" aria-labelledby="productTitle"><div class="modal-head"><span class="eyebrow">CONOCE TU PRÓXIMO EQUIPO</span><button class="icon-button" data-close="productModal" aria-label="Cerrar detalles">✕</button></div><div id="productDetails"></div></dialog>
+  <dialog class="modal" id="checkoutModal" aria-labelledby="checkoutTitle"><div class="modal-head"><span class="eyebrow">TODO EN UN LUGAR</span><button class="icon-button" data-close="checkoutModal" aria-label="Cerrar resumen">✕</button></div><h2 id="checkoutTitle">Tu selección está lista.</h2><p class="muted">Este resumen es una demostración. No constituye un pedido ni procesa pagos.</p><div id="checkoutSummary"></div><button class="primary full" data-close="checkoutModal">Seguir explorando</button></dialog>
+  <div class="toast" id="toast" role="status" aria-live="polite" aria-atomic="true"></div>
+</body>
+</html>
